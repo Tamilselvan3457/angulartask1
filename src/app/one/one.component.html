@@ -1,0 +1,18 @@
+<div class="container" >
+    <p>your are welcome</p>
+    {{users$ | json}}
+    <table>
+        <tr>
+            <th>id</th>
+            <th>email</th>
+            <th>first_name</th>
+            <th>last_name</th>
+        </tr>
+        <tr *ngFor="let user in users$">
+            <td>{{user.id}}</td>
+            <td>{{user.first_name}}</td>
+            <td>{{user.last_name}}</td>
+        </tr>
+    </table>
+</div>
+

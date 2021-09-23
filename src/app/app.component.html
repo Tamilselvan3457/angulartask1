@@ -1,0 +1,20 @@
+
+<mat-toolbar style="background-color: rgb(17, 17, 17);">
+  <button  (click)="sidenav.toggle();"  mat-button style="color: whitesmoke;" ><mat-icon>menu</mat-icon></button> 
+  <button  mat-button style="background-color: grey;" >Menu1</button>
+  <button  mat-button style="background-color: grey;" >Menu2</button>
+  <button  routerLink="one" mat-button style="background-color: grey;" > users   </button>
+  
+</mat-toolbar>
+<mat-sidenav-container >
+  <mat-sidenav #sidenav opened=false mode="side" style="background-color: grey;">
+    
+    <mat-nav-list style="width: 200px;">
+        
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <p style="height: 100vh; background-color:black;"><router-outlet></router-outlet> </p>
+    
+  </mat-sidenav-content>
+</mat-sidenav-container>
